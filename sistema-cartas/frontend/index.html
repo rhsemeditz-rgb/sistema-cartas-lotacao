@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar — Sistema de Cartas de Lotação</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="login-body">
+  <div class="login-card">
+    <img src="/assets/brasao.png" alt="Brasão de Imperatriz" class="login-brasao">
+    <h1 class="login-titulo">Sistema de Gestão de Cartas de Lotação dos Servidores</h1>
+    <p class="login-subtitulo">Secretaria Municipal de Educação — Imperatriz/MA</p>
+
+    <div id="alerta" class="alerta alerta-erro" style="display:none;"></div>
+
+    <form id="form-login" novalidate>
+      <div class="form-group">
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" name="usuario" autocomplete="username" required maxlength="50" autofocus>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" autocomplete="current-password" required maxlength="200">
+      </div>
+
+      <button type="submit" class="btn btn-primario login-btn" id="btn-entrar">Entrar</button>
+    </form>
+
+    <p class="login-rodape">
+      Sistema pertencente a <strong>Lucas Italo Pinto Franco</strong><br>
+      — responsável pelo ponto da SEMED —
+    </p>
+  </div>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>

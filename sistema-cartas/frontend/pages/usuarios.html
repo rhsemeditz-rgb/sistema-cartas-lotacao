@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuários — Sistema de Cartas de Lotação</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="main-header">
+        <div>
+          <h2>Gerenciar Usuários</h2>
+          <p>Adicione, edite ou remova usuários do sistema</p>
+        </div>
+        <button class="btn btn-primario" id="btn-novo">+ Novo usuário</button>
+      </div>
+
+      <div class="card">
+        <div class="busca-wrapper">
+          <input type="text" id="busca" placeholder="Buscar por nome ou usuário...">
+        </div>
+        <div class="tabela-wrapper">
+          <table>
+            <thead>
+              <tr><th>Nome</th><th>Usuário</th><th>Tipo</th><th>Status</th><th>Ações</th></tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal">
+      <h3 id="modal-titulo">Novo usuário</h3>
+      <div id="modal-alerta"></div>
+      <div class="form-group">
+        <label>Nome completo *</label>
+        <input type="text" id="m-nome" maxlength="150">
+      </div>
+      <div class="form-group">
+        <label>Usuário (login) *</label>
+        <input type="text" id="m-usuario" maxlength="50" placeholder="ex: maria.silva">
+        <small style="color:var(--cinza-texto);">Somente letras minúsculas, números, ponto, hífen e underline</small>
+      </div>
+      <div class="form-group">
+        <label id="m-senha-label">Senha * (mínimo 8 caracteres)</label>
+        <input type="password" id="m-senha" maxlength="200">
+      </div>
+      <div class="form-group">
+        <label>Tipo *</label>
+        <select id="m-tipo">
+          <option value="comum">Usuário comum (só faz cartas)</option>
+          <option value="admin">Administrador</option>
+        </select>
+      </div>
+      <div class="modal-acoes">
+        <button class="btn btn-secundario" id="m-cancelar">Cancelar</button>
+        <button class="btn btn-primario" id="m-salvar">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    (async function () {
+      await App.carregarSessao();
+      if (App.usuario.tipo !== 'admin') { window.location.href = '/dashboard'; return; }
+      App.montarSidebar('usuarios');
+      App.ativarTravaSaida();
+
+      const tbody = document.getElementById('tbody');
+      const modalBg = document.getElementById('modal-bg');
+      let editandoId = null;
+      let lista = [];
+
+      async function carregar() {
+        const busca = document.getElementById('busca').value.trim();
+        const res = await App.api(`/api/users?busca=${encodeURIComponent(busca)}`);
+        lista = await res.json();
+        render();
+      }
+
+      function render() {
+        if (!lista.length) {
+          tbody.innerHTML = '<tr><td colspan="5" class="vazio">Nenhum usuário encontrado</td></tr>';
+          return;
+        }
+        tbody.innerHTML = lista.map(u => `
+          <tr>
+            <td><strong>${App.esc(u.nome)}</strong></td>
+            <td>${App.esc(u.usuario)}</td>
+            <td><span class="tag ${u.tipo === 'admin' ? 'tag-azul' : 'tag-cinza'}">${u.tipo === 'admin' ? 'Admin' : 'Comum'}</span></td>
+            <td><span class="tag ${u.ativo ? 'tag-verde' : 'tag-vermelho'}">${u.ativo ? 'Ativo' : 'Inativo'}</span></td>
+            <td class="acoes">
+              <button class="btn btn-secundario btn-pequeno" data-editar="${u.id}">Editar</button>
+              <button class="btn ${u.ativo ? 'btn-amarelo' : 'btn-sucesso'} btn-pequeno" data-toggle="${u.id}" ${u.id === App.usuario.id ? 'disabled' : ''}>${u.ativo ? 'Desativar' : 'Ativar'}</button>
+              <button class="btn btn-perigo btn-pequeno" data-excluir="${u.id}" ${u.id === App.usuario.id ? 'disabled' : ''}>Excluir</button>
+            </td>
+          </tr>
+        `).join('');
+
+        tbody.querySelectorAll('[data-editar]').forEach(b => b.addEventListener('click', () => abrirEdicao(parseInt(b.dataset.editar))));
+        tbody.querySelectorAll('[data-toggle]').forEach(b => b.addEventListener('click', () => toggleAtivo(parseInt(b.dataset.toggle))));
+        tbody.querySelectorAll('[data-excluir]').forEach(b => b.addEventListener('click', () => excluir(parseInt(b.dataset.excluir))));
+      }
+
+      function abrirModal(titulo) {
+        document.getElementById('modal-titulo').textContent = titulo;
+        document.getElementById('modal-alerta').innerHTML = '';
+        modalBg.classList.add('ativo');
+      }
+
+      function fecharModal() {
+        modalBg.classList.remove('ativo');
+        editandoId = null;
+        ['m-nome', 'm-usuario', 'm-senha'].forEach(id => document.getElementById(id).value = '');
+        document.getElementById('m-tipo').value = 'comum';
+        document.getElementById('m-usuario').disabled = false;
+      }
+
+      function abrirEdicao(id) {
+        const u = lista.find(x => x.id === id);
+        if (!u) return;
+        editandoId = id;
+        document.getElementById('m-nome').value = u.nome;
+        document.getElementById('m-usuario').value = u.usuario;
+        document.getElementById('m-usuario').disabled = true;
+        document.getElementById('m-tipo').value = u.tipo;
+        document.getElementById('m-senha-label').textContent = 'Nova senha (deixe vazio para manter)';
+        abrirModal('Editar usuário');
+      }
+
+      document.getElementById('btn-novo').addEventListener('click', () => {
+        document.getElementById('m-senha-label').textContent = 'Senha * (mínimo 8 caracteres)';
+        abrirModal('Novo usuário');
+      });
+
+      document.getElementById('m-cancelar').addEventListener('click', fecharModal);
+      modalBg.addEventListener('click', (e) => { if (e.target === modalBg) fecharModal(); });
+
+      document.getElementById('m-salvar').addEventListener('click', async () => {
+        const nome = document.getElementById('m-nome').value.trim();
+        const usuario = document.getElementById('m-usuario').value.trim().toLowerCase();
+        const senha = document.getElementById('m-senha').value;
+        const tipo = document.getElementById('m-tipo').value;
+
+        const payload = editandoId
+          ? { nome, tipo, ...(senha ? { senha } : {}) }
+          : { nome, usuario, senha, tipo };
+
+        const res = await App.api(
+          editandoId ? `/api/users/${editandoId}` : '/api/users',
+          { method: editandoId ? 'PUT' : 'POST', body: payload }
+        );
+        const d = await res.json();
+        if (!res.ok) {
+          document.getElementById('modal-alerta').innerHTML = `<div class="alerta alerta-erro">${App.esc(d.erro)}</div>`;
+          return;
+        }
+        App.toast(editandoId ? 'Usuário atualizado!' : 'Usuário criado!');
+        fecharModal();
+        carregar();
+      });
+
+      async function toggleAtivo(id) {
+        const u = lista.find(x => x.id === id);
+        const res = await App.api(`/api/users/${id}`, { method: 'PUT', body: { ativo: !u.ativo } });
+        const d = await res.json();
+        if (!res.ok) { alert(d.erro); return; }
+        App.toast(u.ativo ? 'Usuário desativado' : 'Usuário ativado');
+        carregar();
+      }
+
+      async function excluir(id) {
+        const u = lista.find(x => x.id === id);
+        if (!confirm(`Excluir DEFINITIVAMENTE o usuário "${u.nome}"?\n\nEsta ação não pode ser desfeita.`)) return;
+        const res = await App.api(`/api/users/${id}`, { method: 'DELETE' });
+        const d = await res.json();
+        if (!res.ok) { alert(d.erro); return; }
+        App.toast('Usuário excluído');
+        carregar();
+      }
+
+      let deb = null;
+      document.getElementById('busca').addEventListener('input', () => {
+        clearTimeout(deb);
+        deb = setTimeout(carregar, 300);
+      });
+
+      carregar();
+    })();
+  </script>
+</body>
+</html>

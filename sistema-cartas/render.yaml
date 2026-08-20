@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: sistema-cartas-lotacao
+    runtime: node
+    plan: starter
+    buildCommand: npm install && npm run init-db
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: COOKIE_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES
+        value: 8h
+      - key: DB_PATH
+        value: /var/data/sistema.db
+    disk:
+      name: dados
+      mountPath: /var/data
+      sizeGB: 1

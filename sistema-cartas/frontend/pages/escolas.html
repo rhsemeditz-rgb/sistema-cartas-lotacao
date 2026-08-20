@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolas — Sistema de Cartas de Lotação</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="main-header">
+        <div>
+          <h2>Gerenciar Escolas</h2>
+          <p>Escolas, creches, unidades da zona rural e setores</p>
+        </div>
+        <button class="btn btn-primario" id="btn-nova">+ Nova unidade</button>
+      </div>
+
+      <div class="card">
+        <div class="busca-wrapper">
+          <input type="text" id="busca" placeholder="Buscar por nome, endereço ou diretor...">
+          <select id="filtro-tipo">
+            <option value="">Todos os tipos</option>
+            <option value="municipal">Escolas Municipais</option>
+            <option value="rural">Zona Rural</option>
+            <option value="creche">Creches</option>
+            <option value="setor">Setores/Deptos</option>
+          </select>
+          <select id="filtro-status">
+            <option value="">Só ativas</option>
+            <option value="1">Incluir inativas</option>
+          </select>
+        </div>
+        <p style="color:var(--cinza-texto);font-size:12px;margin-bottom:12px;" id="contador"></p>
+        <div class="tabela-wrapper">
+          <table>
+            <thead>
+              <tr><th>Unidade</th><th>Endereço</th><th>Diretor(a)</th><th>Tipo</th><th>Status</th><th>Ações</th></tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal">
+      <h3 id="modal-titulo">Nova unidade</h3>
+      <div id="modal-alerta"></div>
+      <div class="form-group">
+        <label>Nome da unidade *</label>
+        <input type="text" id="m-nome" maxlength="250" style="text-transform:uppercase;">
+      </div>
+      <div class="form-group">
+        <label>Endereço *</label>
+        <input type="text" id="m-endereco" maxlength="300" style="text-transform:uppercase;">
+      </div>
+      <div class="form-group">
+        <label>Nome do(a) diretor(a)/gestor(a) *</label>
+        <input type="text" id="m-diretor" maxlength="200" style="text-transform:uppercase;">
+      </div>
+      <div class="form-group">
+        <label>Tipo *</label>
+        <select id="m-tipo">
+          <option value="municipal">Escola Municipal</option>
+          <option value="rural">Escola Zona Rural</option>
+          <option value="creche">Creche</option>
+          <option value="setor">Setor/Departamento</option>
+        </select>
+      </div>
+      <div class="modal-acoes">
+        <button class="btn btn-secundario" id="m-cancelar">Cancelar</button>
+        <button class="btn btn-primario" id="m-salvar">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    (async function () {
+      await App.carregarSessao();
+      if (App.usuario.tipo !== 'admin') { window.location.href = '/dashboard'; return; }
+      App.montarSidebar('escolas');
+      App.ativarTravaSaida();
+
+      const tbody = document.getElementById('tbody');
+      const modalBg = document.getElementById('modal-bg');
+      let editandoId = null;
+      let lista = [];
+
+      async function carregar() {
+        const busca = document.getElementById('busca').value.trim();
+        const tipo = document.getElementById('filtro-tipo').value;
+        const inativas = document.getElementById('filtro-status').value;
+        const res = await App.api(`/api/escolas?busca=${encodeURIComponent(busca)}&tipo=${tipo}&incluir_inativas=${inativas}`);
+        lista = await res.json();
+        document.getElementById('contador').textContent = `${lista.length} unidade(s) encontrada(s)`;
+        render();
+      }
+
+      function render() {
+        if (!lista.length) {
+          tbody.innerHTML = '<tr><td colspan="6" class="vazio">Nenhuma unidade encontrada</td></tr>';
+          return;
+        }
+        tbody.innerHTML = lista.map(e => `
+          <tr>
+            <td><strong>${App.esc(e.nome)}</strong></td>
+            <td style="max-width:220px;">${App.esc(e.endereco)}</td>
+            <td>${App.esc(e.nome_diretor)}</td>
+            <td><span class="tag ${App.tipoTagClass(e.tipo)}">${App.tipoLabel(e.tipo)}</span></td>
+            <td><span class="tag ${e.ativo ? 'tag-verde' : 'tag-vermelho'}">${e.ativo ? 'Ativa' : 'Inativa'}</span></td>
+            <td class="acoes">
+              <button class="btn btn-secundario btn-pequeno" data-editar="${e.id}">Editar</button>
+              <button class="btn ${e.ativo ? 'btn-amarelo' : 'btn-sucesso'} btn-pequeno" data-toggle="${e.id}">${e.ativo ? 'Desativar' : 'Ativar'}</button>
+            </td>
+          </tr>
+        `).join('');
+
+        tbody.querySelectorAll('[data-editar]').forEach(b => b.addEventListener('click', () => abrirEdicao(parseInt(b.dataset.editar))));
+        tbody.querySelectorAll('[data-toggle]').forEach(b => b.addEventListener('click', () => toggleAtivo(parseInt(b.dataset.toggle))));
+      }
+
+      function abrirModal(titulo) {
+        document.getElementById('modal-titulo').textContent = titulo;
+        document.getElementById('modal-alerta').innerHTML = '';
+        modalBg.classList.add('ativo');
+      }
+
+      function fecharModal() {
+        modalBg.classList.remove('ativo');
+        editandoId = null;
+        ['m-nome', 'm-endereco', 'm-diretor'].forEach(id => document.getElementById(id).value = '');
+        document.getElementById('m-tipo').value = 'municipal';
+      }
+
+      function abrirEdicao(id) {
+        const e = lista.find(x => x.id === id);
+        if (!e) return;
+        editandoId = id;
+        document.getElementById('m-nome').value = e.nome;
+        document.getElementById('m-endereco').value = e.endereco;
+        document.getElementById('m-diretor').value = e.nome_diretor;
+        document.getElementById('m-tipo').value = e.tipo;
+        abrirModal('Editar unidade');
+      }
+
+      document.getElementById('btn-nova').addEventListener('click', () => abrirModal('Nova unidade'));
+      document.getElementById('m-cancelar').addEventListener('click', fecharModal);
+      modalBg.addEventListener('click', (e) => { if (e.target === modalBg) fecharModal(); });
+
+      document.getElementById('m-salvar').addEventListener('click', async () => {
+        const payload = {
+          nome: document.getElementById('m-nome').value.trim(),
+          endereco: document.getElementById('m-endereco').value.trim(),
+          nome_diretor: document.getElementById('m-diretor').value.trim(),
+          tipo: document.getElementById('m-tipo').value
+        };
+
+        const res = await App.api(
+          editandoId ? `/api/escolas/${editandoId}` : '/api/escolas',
+          { method: editandoId ? 'PUT' : 'POST', body: payload }
+        );
+        const d = await res.json();
+        if (!res.ok) {
+          document.getElementById('modal-alerta').innerHTML = `<div class="alerta alerta-erro">${App.esc(d.erro)}</div>`;
+          return;
+        }
+        App.toast(editandoId ? 'Unidade atualizada!' : 'Unidade criada!');
+        fecharModal();
+        carregar();
+      });
+
+      async function toggleAtivo(id) {
+        const e = lista.find(x => x.id === id);
+        const acao = e.ativo ? 'desativar' : 'ativar';
+        if (e.ativo && !confirm(`Desativar "${e.nome}"?\n\nEla deixará de aparecer na lista de escolhas ao criar cartas, mas poderá ser reativada depois.`)) return;
+        const res = await App.api(`/api/escolas/${id}`, { method: 'PUT', body: { ativo: !e.ativo } });
+        const d = await res.json();
+        if (!res.ok) { alert(d.erro); return; }
+        App.toast(`Unidade ${acao === 'desativar' ? 'desativada' : 'ativada'}`);
+        carregar();
+      }
+
+      let deb = null;
+      document.getElementById('busca').addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(carregar, 300); });
+      document.getElementById('filtro-tipo').addEventListener('change', carregar);
+      document.getElementById('filtro-status').addEventListener('change', carregar);
+
+      carregar();
+    })();
+  </script>
+</body>
+</html>

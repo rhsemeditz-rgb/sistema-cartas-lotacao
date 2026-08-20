@@ -1,0 +1,1136 @@
+[
+  {
+    "nome": "APAE (MELVIN JONES)",
+    "endereco": "RUA SÃO FRANCISCO, QD 10 - VILA LOBÃO",
+    "diretor": "SEVERINA DANTAS SANTOS",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "DA AMIZADE",
+    "endereco": "RUA DA AMIZADE,09   BOM JESUS",
+    "diretor": "LUCIENE AIRES DA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "ADALBERTO FRANKLIN P.DE CASTRO",
+    "endereco": "AV.PRINCIPAL,S/N BAIRRO DOM AFONSO FELIPE GREGORY",
+    "diretor": "ARLETE PORFÍRIO DE JESUS LIMA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "BILÍNGUE PROF. TELASCO P. FILHO",
+    "endereco": "RUA HENRIQUE DIAS, 957 - SÃO JOSÉ DO EGITO",
+    "diretor": "ELISANDRA LIMA CARNEIRO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "ANTONIO LEITE ANDRADE",
+    "endereco": "AV.PRINCIPAL I RESIDENCIAL SEBASTIÃO RÉGIS Nº50",
+    "diretor": "DINA ALVES BRASIL DE SOUSA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "ANTONIO LEITE ANDRADE/EXTENSÃO",
+    "endereco": "RUA 17, N° 36 – PARQUE SÃO JOSÉ",
+    "diretor": "DINA ALVES BRASIL DE SOUSA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "CASTRO ALVES I",
+    "endereco": "RUA DOM VITAL,238 ENTRONCAMENTO",
+    "diretor": "MARIA IVANILDE GOMES DO CARMO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "CASTRO ALVES II",
+    "endereco": "AV. DORGIVAL PINHEIRO DE SOUSA,1063 ENTRONCAMENTO",
+    "diretor": "LUZILEIDE BARBOSA SANTOS",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "C EDUC. MORADA DO SOL",
+    "endereco": "AV. LIBERDADE N°08 JD. MORADA DO SOL",
+    "diretor": "VADEVALDO ALVES DA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "C EDUC. MARANHENSE",
+    "endereco": "RUA TANCREDO NEVES, 01 – CONJ. PLANALTO I",
+    "diretor": "MIURA CRISTINA PORTUGAL AZAVEDO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "CONSTANTINO BARBOSA DA SILVA",
+    "endereco": "RUA GUMERCINDO MILHOMEM Nº.S/N OURO VERDE",
+    "diretor": "RUTE GOMES PEREIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "DARCY RIBEIRO",
+    "endereco": "RUA NOVE,545 PARQUE SÃO JOSÉ",
+    "diretor": "CEZÁRIA MARINHO ALVES",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "DOMINGOS MORAIS",
+    "endereco": "AV.URBANO ROCHA S/N, RECANTO UNIVERSITÁRIO",
+    "diretor": "WILMA CONCEIÇÃO BANDEIRA ALVES",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EDELVIRA MARQUES",
+    "endereco": "AVENIDA IMPERATTIZ, N°130 PLANALTO I",
+    "diretor": "FABIANA DA SILVA VIEIRA PORTUGAL",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "ELIZA NUNES",
+    "endereco": "RUA BOM JESUS S/N - SANTA RITA",
+    "diretor": "SINEIDE SANTOS DA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "ESPAÇO INFANTIL MARANATHA",
+    "endereco": "RUA SÃO JOÃO Nº 88 - JARDIM TROPICAL",
+    "diretor": "ANY JANES LOPES RIMUALDO ARAÚJO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "FERNANDA BRANCO OLIVEIRA",
+    "endereco": "RUA DIAMENTE,Nº40 HABITAR BRASIL",
+    "diretor": "SUYAN SANTA VIEIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "FRATERNIDADE",
+    "endereco": "RUA CORIOLANO MILHOMEM,3519 - S. SALVADOR",
+    "diretor": "RAQUEL MARTINS SALDANHA VIEIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MUNICIPAL DE EDUCAÇÃO INFANTIL FREI BENJAMIN ZANARDINI",
+    "endereco": "RUA SIMPLÍCIO MOREIRA, S/N NOVA IMPERATRIZ",
+    "diretor": "HELLEN CRISTINE SETUBAL SILVA DE OLIVEIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "FREI MANOEL PROCÓPIO",
+    "endereco": "AV.DORGIVAO PINHEIRO DE SOUZA",
+    "diretor": "JUSSIMEIRE CARDOSO LOPES TAVARES",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "FREI PAULO DE GRAYMOOR",
+    "endereco": "RUA JOÃO PESSOA, 731 – BACURÍ",
+    "diretor": "MAGALI DE SOUSA FARIAS NASCIMENTO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "ESCOLA MILITAR BOMBEIRO 2 DE JULHO",
+    "endereco": "RUA SETE, S/N - VILINHA",
+    "diretor": "JOSILENE DA SILVA CONCEIÇÃO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "FUNDAÇÃO PIRANGI",
+    "endereco": "RUA PRIMAVERA, 10 – PARQUE ALVORADA II",
+    "diretor": "RAILENA MOREIRA PIRANGI",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "GIOVANNI ZANNI",
+    "endereco": "RUA CORIOLANO MILHOMEM, 2200 - SÃO JOSÉ DO EGITO",
+    "diretor": "ALAIDE ALMEIDA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "GONÇALVES DIAS ENS. FUND",
+    "endereco": "RUA ESTREITA, S154– BACURI",
+    "diretor": "ANA MARIA DOS SANTOS MESQUITA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "HÉRICA BARROS DE JESUS",
+    "endereco": "RUA 5 , S/N RECANTO UNIVERSITARIO",
+    "diretor": "JANAINA DA ARAÚJO PIMENTA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "IPIRANGA",
+    "endereco": "RUA 5 VILA IPIRANGA",
+    "diretor": "SOLANGE MOTA FERREIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PRÓ INFÂNCIA JACKSON LAGO",
+    "endereco": "RUA RETÂNGULO, 27- ALTO BONITO",
+    "diretor": "NEILDE SOUSA OLIVEIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EME MARLENE SOARES",
+    "endereco": "RUA 2 DE JUNHOR S/N PARQUE ANHANGUERA",
+    "diretor": "MERY KECIA BARBOSA MOURA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "JAIR ROSIGNOLI",
+    "endereco": "RUA DOS TUCANOS S/N - SANTA INÊS",
+    "diretor": "MARIA DA CONCEIÇÃO ALVES DE SOUSA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI. JARDIM SUMARÉ - EXTENSÃO",
+    "endereco": "RUA SILVINI TANTIS Nº S/N RESIDENCIAL CANTO DA SERRA",
+    "diretor": "MARIA DAS GRAÇAS DE AGUIAR ALMEIDA MOREIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI.JARDIM SUMARÉ",
+    "endereco": "RUA PROJETADA,Nº 10 BAIRRO JARDIM SUMARÉ",
+    "diretor": "MARIA DAS GRAÇAS DE AGUIAR ALMEIDA MOREIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "JOSÉ CARNEIRO DOS SANTOS",
+    "endereco": "AV. PRINCIPAL I S/NCONJUNTO HABITAR SEBASTIÃO REGIS",
+    "diretor": "ÁUREA CILENE BRITO DA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "JOSÉ DE RIBAMAR GARROS",
+    "endereco": "RUA 05, N°31 VILINHA",
+    "diretor": "NADJA ELIAS AVELINO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "JOÃO BATISTA DE PAIVA",
+    "endereco": "RUA BRASIL SN - NOVA IMPERATRIZ",
+    "diretor": "ROSELIA COSTA DOS SANTOS",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "E.M.E.I.NOSSA SENHORA DE FÁTIMA",
+    "endereco": "RUA CAMUARANA, Nº 13 -JARDIM MORADA DO SOL",
+    "diretor": "DERIVAN DE SANTANA COSTA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "JOÃO SILVA",
+    "endereco": "RUA W1, 557 – ASA NORTE",
+    "diretor": "CIRO RODRIGUES MARTINS",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI.PROFª.IOLANDA EULINDA DE SOUZA CORTEZ",
+    "endereco": "RUA DOS ANGELINS,S/N PARQUE IMPERIAL",
+    "diretor": "FRANCISCA DE SOUSA CARDOSO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "E.M.E.I  MARLENE SOARES",
+    "endereco": "RUA DOIS DE JULHO, S/N PAQUE ANHAGUREA",
+    "diretor": "ANDREA SILVA DE CASTRO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI JEOVÁ PEREIRA DA SILVA",
+    "endereco": "RUA DIAMENTE, S/N HABITAR BRASIL",
+    "diretor": "ELAYNE REGINA T. AZEVEDO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "JEOVÁ PEREIRA DA SILVA/EXTENSÃO",
+    "endereco": "RUA COLETORA,2 ESQUINA COM A RUA 34 VILA VITÓRIA",
+    "diretor": "PAULA DANIELLY GOMES PEREIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EXTENSÃO DO JARDIM SUMARÉ",
+    "endereco": "SILVIO SANTOS Nº S/N CANTO DA SERRA",
+    "diretor": "MARIA DAS GRAÇAS DE A. ALMEIDA MOREIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI JARDIM SUMARÉ",
+    "endereco": "RUA PROJETADA Nº 10 – ÁREA VERDE",
+    "diretor": "MARIA DAS GRAÇAS DE A. ALMEIDA MOREIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PROF.JOSÉ SINEY FERRAZ",
+    "endereco": "R.LEONCIO PIRES DOURADO,PRAÇA DA BIBLIA",
+    "diretor": "EUCIANE SOARES AQUINO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "LAGO DO CISNE",
+    "endereco": "RUA HERMES DA FONSECA, 1005 – V REDENÇÃO I",
+    "diretor": "IVANEIDES SILVA VIANA LEITÃO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "LAURO TUPINAMBÁ VALENTE",
+    "endereco": "RUA CORIOLANO MILHOMEM, 940 – BACURI",
+    "diretor": "RAQUEL MARTINS SALDANHA VIEIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "LEÔNCIO PIRES DOURADO",
+    "endereco": "RUA PERNAMBUCO, 63 – JUÇARA",
+    "diretor": "ALMIRA REJANE DE SOUZA COSTA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "LÍRIO DOS VALES",
+    "endereco": "AV.INDUSTRIAL,457 SANTA RITA",
+    "diretor": "WALTERNEY FONTINELLE CAVALCANTE",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "LUIS DE FRANÇA MOREIRA (IBADI)",
+    "endereco": "RUA SOUSA LIMA, 643 – NOVA IMPERATRIZ",
+    "diretor": "ARLENE REGINA CONCEIÇÃO DA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MADALENA DE CANOSSA",
+    "endereco": "AV. TAPAJÓS S/N – PQ SANTA LUCIA",
+    "diretor": "THAMIRES MORAIS DA SILVA GOMES",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MARIANA LUZ",
+    "endereco": "RUA SERGIPE, N°1039 – SANTA RITA",
+    "diretor": "MARIA VILMA DA ROCHA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI SANTO PIO DE SOUSA MORAES",
+    "endereco": "AV. PRINCIPAL, S/N - ITAMAR GUARÁ",
+    "diretor": "KALINY LAGO SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI MARIA EVANGELISTA DE SOUSA",
+    "endereco": "AV. PRINCIPAL, S/N - ITAMAR GUARÁ",
+    "diretor": "KALINY LAGO SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MARIA FRANCISCA PEREIRA DA SILVA",
+    "endereco": "AV. NEWTON BELO S/N - SANTA INÊS",
+    "diretor": "MARIA EDNA SANTOS DA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MARLY SARNEY",
+    "endereco": "RUA GUARANY, S/N, VILA REDENÇÃO I",
+    "diretor": "ISAURA CAITANO DE OLIVEIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI MARIA LUIZA COELHO BRANDÃO",
+    "endereco": "RUA PROJETADA 2 Nº 18 -BAIRRO BOM JESUS",
+    "diretor": "MARIA SANDRA CARDOSO DE ARAÚJO ALENCAR",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MENINO JESUS I I",
+    "endereco": "RUA BOM FUTURO, 636 – VILA LOBÃO",
+    "diretor": "MAIZA DE SOUSA TEIXEIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MORANGUINHO",
+    "endereco": "RUA RAIMUNDO DE MORAIS, 469 – SANTA RITA",
+    "diretor": "MARIA LINDOMAR",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MACHADO DE ASSIS",
+    "endereco": "RUA EPITÁCIO PESSOA, Nº 20 VILA NOVA",
+    "diretor": "ASCANIO LIMA NEGREIROS SANTOS",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI NOSSA SENHORA DE FÁTIMA",
+    "endereco": "RUA CUMUARAMA,S/N BAIRRO MORADA DO SOL",
+    "diretor": "DERIVAN DE SANTANA COSTA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PROFESSORA DOLORES CARVALHO SANTOS/NUCLEU",
+    "endereco": "RUA GLAUBER ROCHA VILA REDENÇÃO I 68",
+    "diretor": "MARIA DA GUIA CARVALHO GONÇALVES",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MARECHAL RONDON",
+    "endereco": "RUA PARAÍBA, 1627 – NOVA IMPERATRIZ",
+    "diretor": "MARIA DULCE DE SOUSA RIBEIRO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MARIA DAS NEVES M. DE SOUZA",
+    "endereco": "RUA CLEMENTINO DE MORAES, N°25 - ALTO BONITO",
+    "diretor": "MARIA CLAUDIA LIMA SOUSA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "MARIA JOSÉ SILVA NUNES",
+    "endereco": "RUA MAMORÉ S/N- PQ SANHAROL",
+    "diretor": "MARIA NILDA NOLETO BRITO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PAULO FREIRE",
+    "endereco": "AV. PEDRO NEIVA DE SANTANA S/N – PQ AMAZONAS",
+    "diretor": "ELISABETTE ALVES DE SOUSA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PEDRO FERREIRA ALENCAR",
+    "endereco": "AV. JK,1356 - SANTA RITA",
+    "diretor": "MARILENE SOUSA E SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PEDRO ABREU",
+    "endereco": "AV. CEL LISBOA S/N – VILA FIQUENE",
+    "diretor": "MARIA JOSÉ MORAIS",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "EMEI MARIA DARCY COSTA COELHO",
+    "endereco": "RUA SALVIO DINO, S/N VILA LOBÃO",
+    "diretor": "LENILVA BRITO PRADO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PRESIDENTE COSTA E SILVA",
+    "endereco": "RUA FORTUNATO BANDEIRA, 1014 – NOVA IMPERATRIZ",
+    "diretor": "NUBIA LEITE SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PRINCESA ISABEL I",
+    "endereco": "RUA BAHIA, 271 – ENTRONCAMENTO",
+    "diretor": "CHISTIELLE SANTANA BOECHAT",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PROF°. JOSÉ QUEIROZ",
+    "endereco": "RUA PROF. JOSÉ QUEIROZ, S/N QD 72 - VILA VITÓRIA",
+    "diretor": "ELIENE CLEMENTE DE ARAÚJO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "PROF°. JURACY ATHAYDE CONCEIÇÃO",
+    "endereco": "RUA URBANO SANTOS Nº10– CENTRO",
+    "diretor": "SANDRA MARIA MARINHO FARIAS",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "RAIMUNDO CORREIA",
+    "endereco": "RUA MARABAZINHO, N°521 – BOCA DA MATA",
+    "diretor": "MARIA RUTH SOARES SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SANTA CLARA DE ASSIS - JISCA",
+    "endereco": "AV. NEWTON BELO Nº1558 – VILA MARIA",
+    "diretor": "MARIA DO SOCORRO SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SANTA LAURA",
+    "endereco": "RUA BETA, 1500 - BACURI",
+    "diretor": "MARIA ARLETE CARVALHO ALMEIDA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SANTA MARIA",
+    "endereco": "RUA SANTO CRISTO, 811 – NOVA IMPERATRIZ",
+    "diretor": "MARIA VIEIRA DE FARIAS",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SANTA RITA",
+    "endereco": "RUA BILA DUTRA, 617 A – BOCA DA MATA",
+    "diretor": "ELZA DIAS MAGALHÃES",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SANTA TEREZA",
+    "endereco": "AV. TIRADENTES, 25 B – PARQUE SÃO JOSÉ",
+    "diretor": "ANTONIA CARVALHO DOS SANTOS",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SANTA TEREZA D’ÁVILA",
+    "endereco": "RUA TANCREDO NEVES, S/N – VILA CAFETEIRA",
+    "diretor": "JANILDA DOS SANTOS SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SANTO INÁCIO DE LOYOLA",
+    "endereco": "R. 07 DE SETEMBRO, 1515 – BARCURI",
+    "diretor": "ROSILENE DA SILVA LOYOLA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SANTOS DUMONT",
+    "endereco": "RUA PROJETA C, 1232 – BACURÍ",
+    "diretor": "LENILDA COSTA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SÃO FRANCISCO DO CANINDÉ",
+    "endereco": "RUA PAULO RODRIGUES, 240 – VILA CAFETEIRA",
+    "diretor": "ARINETE DE ALMEIDA FERREIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SÃO JORGE I",
+    "endereco": "RUA DO ARAME, N°398 – VILINHA",
+    "diretor": "ERISVELTON PEREIRA DE ALMEIDA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SÃO SEBASTIÃO",
+    "endereco": "RUA 01, Nº10 – CAEMA",
+    "diretor": "LUCILENE NASCIMENTO SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SÃO VICENTE DE PAULA",
+    "endereco": "RUA PIAUÍ, 1699 - BACURI",
+    "diretor": "MARIA DO PERPETUO SOCORRO R. TEIXEIRA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SOLIDARIEDADE",
+    "endereco": "AV. JK Nº 5 CINCO IRMÃO",
+    "diretor": "GIZELIA OLIVEIRA COSTA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SHIRLEY FARIAS TORRES FERREIRA",
+    "endereco": "RUA LÉO FRANKLIN S/N- VILA MARIANA",
+    "diretor": "CUSTODIA DOS SANTOS DA SILVA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "TIA EMILIA",
+    "endereco": "RUA ALVARO PEREIRA Nº 638 - VILA NOVA",
+    "diretor": "SONJA CRISTIANE MOURA DE LIMA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "SOUSA LIMA",
+    "endereco": "RUA DO ARAME, 304 – VILINHA",
+    "diretor": "FRANCISCA NASCIMENTO DE ALMEIDA",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "TIRADENTES II",
+    "endereco": "RUA 13, QD 702 - PQ DO BURITI",
+    "diretor": "HILDIMAR FEITOZA DE PAULO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "TOCANTINS",
+    "endereco": "RUA SIMPLÍCIO MOREIRA, 1112 - CENTRO",
+    "diretor": "TEREZINHA DE JESUS SODRE PINHEIRO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "TOMÁZIA CARVALHO",
+    "endereco": "RUA BETA Nº1529 – BACURI",
+    "diretor": "MARIA EULENA SÁ ARAÚJO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "WADY FIQUENE /GILCILENE ARCANJO CORDEIRO MOREIRA",
+    "endereco": "RUA SÃO PEDRO S/N – NOVA IMPERATRIZ",
+    "diretor": "CLEOMAR CONCEIÇÃO DA SILVA PINTO",
+    "tipo": "municipal"
+  },
+  {
+    "nome": "AFONSO PENA",
+    "endereco": "RUA DO CAMPO S/N - KM 1.700",
+    "diretor": "MARIA EDICLES DA SILVA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "BERNARDO SAYÃO",
+    "endereco": "BR 010 KM 1.200 – RIACHO DO MEIO",
+    "diretor": "MARIA DE JESUS SILVA MONTEIRO",
+    "tipo": "rural"
+  },
+  {
+    "nome": "CHAPARRAL",
+    "endereco": "BR – 010  KM – 020 - FAZENDA CHAPARRAL",
+    "diretor": "MARIA LÚCIA OLIVEIRA BEZERRA (PROF. RESPONSÁVEL)",
+    "tipo": "rural"
+  },
+  {
+    "nome": "COELHO NETO",
+    "endereco": "BR 010 – MÃOZINHA",
+    "diretor": "MARIA DO SOCORRO CARDOSO RÊGO (PROF. RESP)",
+    "tipo": "rural"
+  },
+  {
+    "nome": "DOM MARCELINO",
+    "endereco": "AVENIDA FREI OSVALDO, Nº 01- COQUELÂNDIA",
+    "diretor": "RAIMUNDA SANTOS ARAÚJO",
+    "tipo": "rural"
+  },
+  {
+    "nome": "DOM PEDRO I",
+    "endereco": "AV. JOÃO XXIII, S/Nº - COQUELÂNDIA",
+    "diretor": "MARIA JOSÉ SANTOS DE OLIVEIRA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "DOM PEDRO II",
+    "endereco": "RUA PRINCIPAL S/N AÇAIZAL PERNAMBUCANOS",
+    "diretor": "MARIA DE JESUS DA SILVA LIMA (PROF. RESP.)",
+    "tipo": "rural"
+  },
+  {
+    "nome": "ENOCK ALVES BEZERRA",
+    "endereco": "RUA PRINCIPAL S/N - IMBIRAL",
+    "diretor": "CÍCERO ROBERTO LIMA BATISTA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "HUMBERTO DE CAMPOS",
+    "endereco": "RUA PRINCIPAL S/N - SÃO FRANCISCO DO AÇAIZAL",
+    "diretor": "ANALICE ALVES SILVA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "JOÃO GONÇALVES SANTIAGO",
+    "endereco": "KM 1.200",
+    "diretor": "SÉRGIO LUIZ DOS SANTOS (PROF. RESP.)",
+    "tipo": "rural"
+  },
+  {
+    "nome": "JOÃO GUIMARÃES",
+    "endereco": "ÁGUA BOA",
+    "diretor": "MARIA GILDETE ALVES DE BRITO (PROF. RESPONSÁVEL)",
+    "tipo": "rural"
+  },
+  {
+    "nome": "JOÃO LISBOA",
+    "endereco": "AV. SÃO PEDRO, S/Nº - CACAUZINHO",
+    "diretor": "RENATO JORGE PEDROSA (PROF. RESP.)",
+    "tipo": "rural"
+  },
+  {
+    "nome": "JUSCELINO KUBITSCHEK",
+    "endereco": "RUA BOM JESUS, Nº 159 – POVOADO PETROLINA",
+    "diretor": "FRANCISCA DE SOUSA SILVA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "MANOEL RIBEIRO",
+    "endereco": "RUA MANOEL RIBEIRO, S/Nº - CENTRO NOVO",
+    "diretor": "ANTONIA LUCILEIDE FORTALEZA DE SOUSA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "MARCIONILIA GOMES SOARES",
+    "endereco": "RUA SÃO RAIMUNDO, Nº 400 – CAMAÇARI",
+    "diretor": "VALDEINA REIS SOARES",
+    "tipo": "rural"
+  },
+  {
+    "nome": "MOREIRA NETO",
+    "endereco": "RUA BERNARDO SAYÃO, S/Nº - LAGOA VERDE",
+    "diretor": "SANDRA LUCIA BARROS B. BARBOSA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "NOSSA SRª DA CONCEIÇÃO",
+    "endereco": "RUA 25 DE JULHO, S/Nº - VILA CONCEIÇÃO",
+    "diretor": "ANTONIO CARLOS MACIEL DE OLIVEIRA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "NOSSA SRª DE NAZARÉ",
+    "endereco": "RUA CASTELO BRANCO, S/Nº - LAGOA VERDE",
+    "diretor": "ELIENE DE SOUSA MOTA SANTANA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "RAIMUNDO RIBEIRO",
+    "endereco": "R. BAHIA, S/Nº - V. MACHADO",
+    "diretor": "ANTONIA LUCILENE FORTALEZA DE SOUSA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "SANTA LÚCIA",
+    "endereco": "RUA PRINCIPAL S/N PV. JIBOIA - BARRA GRANDE",
+    "diretor": "MARIA DO SANTO NOGUEIRA LIMA (PROF. RESP.)",
+    "tipo": "rural"
+  },
+  {
+    "nome": "SÃO FÉLIX",
+    "endereco": "AVENIDA JOÃO XXIII, Nº 2490 – SÃO FÉLIX",
+    "diretor": "CONCEIÇÃO DE MARIA DA SILVA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "SÃO FRANCISCO",
+    "endereco": "RUA HUM S/N - VILA CHICO DO RÁDIO",
+    "diretor": "SORAIA BARBOSA SAMPAIO",
+    "tipo": "rural"
+  },
+  {
+    "nome": "SANTO AMARO",
+    "endereco": "POVOADO SÃO JOSÉ DA MATANÇA",
+    "diretor": "IRISMAR NASCIMENTO MARTINS (PROF. RESP.)",
+    "tipo": "rural"
+  },
+  {
+    "nome": "SENHOR JESUS",
+    "endereco": "RUA PRINCIPAL S/N VILA CONCEIÇÃO II",
+    "diretor": "RONAILTON GADÊLHA DA SILVA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "TOMÉ DE SOUSA",
+    "endereco": "AV. SÃO RAIMUNDO, 453- O. D’ÁGUA DOS MARTINS",
+    "diretor": "PATRICIA MORAIS LIMA",
+    "tipo": "rural"
+  },
+  {
+    "nome": "VITAL BRASIL",
+    "endereco": "AV. REI DAVI S/N - VILA DAVI II",
+    "diretor": "JOSÉ SATURNINO SILVA SERRÃO",
+    "tipo": "rural"
+  },
+  {
+    "nome": "CRECHE ACONCHEGO",
+    "endereco": "RUA ALAGOAS, 1500 SANTA RITA",
+    "diretor": "CYNARA MARIA SANTOS DE SOUSA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE ANTONIA GLAUCIMEIRE",
+    "endereco": "RUA 18, S/N - VILA MACEDO (PROX IGREJA CATOLICA)",
+    "diretor": "ADRIANA DA LUZ QUEIROZ",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE ARCO-IRIS",
+    "endereco": "RUA ESTÁCIO DE SÁ Nº1 B. VILA FIQUENE",
+    "diretor": "ANA LÚCIA SILVA. COSTA OLIVEIRA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE MUNICIPALIZADA CAMINHO FELIZ",
+    "endereco": "RUA ALTO BONITO N° 637, LAGOA VERDE",
+    "diretor": "JAQUELINE RODRIGUES ALBUQUERQUE DE SENA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE MUNICIPAL CANTINHO DA ALEGRIA I",
+    "endereco": "RUA BAYMA JÚNIOR, 283 CENTRO NOVO",
+    "diretor": "CONCEIÇÃO DE Mª SIRQUEIRA LIMA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE CANTINHO DO SABER",
+    "endereco": "RUA ANTONIO MAIA, 09 - VILA JOÃO CASTELO",
+    "diretor": "FLÁVIA DE SÁ REGO",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CR.MUNICIPAL CIRANDINHA",
+    "endereco": "RUA DA ASSEMBLÉIA,130 - VILA LOBÃO",
+    "diretor": "DEUSIVAN PEREIRA DA SILVA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE CASA DE DOM BOSCO",
+    "endereco": "RUA DOM PEDRO II, 01 - PARQUE DO BURITI",
+    "diretor": "MARIA CONCEIÇÃO DA SILVA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE CIDADE ESPERANÇA",
+    "endereco": "RUA CEL. MANOEL BANDEIRA, 1190 - BEIRA RIO",
+    "diretor": "TAILANE DOS REIS RAMOS",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CONSELHO MUNICIPAL DO PQ.ALVORADA II",
+    "endereco": "AV.REINO UNIDO S/N PARQUE IMPERIALPARQUE ALVORADA II",
+    "diretor": "FRANCIRENE CRUZ DE OLIVEIRA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE MUNICIPAL ESPERANÇA",
+    "endereco": "RUA FREI MANOEL PROCÓPIO, Nº 101 BAORR CENTRO",
+    "diretor": "ROSENILDE CHAVES NASCIMENTO DE JESUS",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CENTRO DE EDUCAÇÃO INFANTIL MADALENA DE CANESSA",
+    "endereco": "AV.MUTIRÃO, S/N PARQUE AMAZONAS",
+    "diretor": "EDILEUZA BRANDÃO DE OLIVEORA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "EME JOSÉ CARNEIRO SANTOS",
+    "endereco": "AV. PRINCIPAL I,S/N SEBASTIÃO REGIS",
+    "diretor": "AUREA CILENE BRITO DA SILVA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE LÁPIS NA MÃO",
+    "endereco": "RUA SÃO FRANCISCO,53 PARQUE SANTA LUCIA",
+    "diretor": "MARIA DAS DORES FILGUEIRA DOS SANTOS",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE MARANHÃO DO SUL",
+    "endereco": "RUA SÃO FRANCISCO,Nº 863 B. NOVA IMPERATRIZ",
+    "diretor": "GESSILENE DE SOUSA SILVA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE MORANGUINHO",
+    "endereco": "RUA NILO PEÇANHA,02 B.PARQUE SENHAROL",
+    "diretor": "ALANA KESSYA SILVA RAMOS",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE MUNDO INFANTIL",
+    "endereco": "RUA AIMORÉS,30 B. PARQUE DES ESTRELAS",
+    "diretor": "ANA RITA ASSUNÇÃO DE SOUSA SILVA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CR.MUNDO INFANTIL",
+    "endereco": "RUA SERGIPE,115 B. JUÇARA",
+    "diretor": "PAULA FERNANDA SANTANA LIMA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CR.PARQUE ANHANGUERA",
+    "endereco": "RUA DO ALECREIM,599 B.PARQUE ANHANGUERA",
+    "diretor": "RONILDE NAZÁRIO BUENO E SILVA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE RISCO E RABISCO",
+    "endereco": "RUA PARALELOGRAMA,14 B. ALTO BONITO",
+    "diretor": "MARIA JOSÉ PEREIRA",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE MUNICIPAL SANTA MARGARIDA",
+    "endereco": "AV. SÃO JOÃO, 854 VILA JK",
+    "diretor": "LEWTHANEA CONCEIÇÃO FERREIRA DOS SANTOS",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CHRECHE SANTA TEREZINHA",
+    "endereco": "RUA SPANHOL,49 B.ENTONCAMENTO",
+    "diretor": "MARIA MARGARET CHEVES TORRES",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CRECHE MUNICIPAL VOVÔ COSTINHA",
+    "endereco": "RUA C Nº 26 B.VILA IPIRANGA",
+    "diretor": "IRANETE XAVIER DOS SANTOS GOMES",
+    "tipo": "creche"
+  },
+  {
+    "nome": "CR.VOVO SUELLY",
+    "endereco": "RUA UM Nº 05 BAIRRO CAEMA",
+    "diretor": "ELIENE XAVIER NASCIMENTO",
+    "tipo": "creche"
+  },
+  {
+    "nome": "ASSESSORIA DE COMUNICAÇÃO",
+    "endereco": "RUA URBANO SANTOS -JUÇARA",
+    "diretor": "DÁVILA DE DEUS SOUSA HENRIQUE",
+    "tipo": "setor"
+  },
+  {
+    "nome": "SINDIVATO DOS TRABALHADORES EM ESTABELECIMENTOS PÚBLICOS DE ENSINO DE IMPERATRIZ-STEEI",
+    "endereco": "RUA 13 DE MAIO,64 BAIRRO CENTRO",
+    "diretor": "FRANCISCO MESSIAS DA SILVA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "SECRETARIA ADJUNTA",
+    "endereco": "RUA URBANO SANTOS -JUÇARA",
+    "diretor": "VANESSA DA SILVA PEREIRA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:CONTABILIDADE",
+    "endereco": "RUA URBANO SANTOS -JUÇARA",
+    "diretor": "SIMONE BATALHA BEZERRA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "CENTRO DE ATENDIMENTO PSICOSSOCIAL E DA VOZ DA EDUCAÇÃO",
+    "endereco": "RUA URBANO SANTOS -JUÇARA",
+    "diretor": "JACQUELINE BARBOSA OLIVEIRA BRITO",
+    "tipo": "setor"
+  },
+  {
+    "nome": "COORDENAÇÃO ADMINISTRATIVA/DIRRETORA EXECUTIVA",
+    "endereco": "RUA URBANO SANTOS -JUÇARA",
+    "diretor": "ZORAIMA SOUSA SOARES",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO: COORDENADOR PEDAGÓGICO/SETOR ACOMPANHAMENTO ESCOLAR",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "VIVIANE DA CONCEIÇÃO MENDES PEREIRA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:BIBLIOTECA ESCOLAR",
+    "endereco": "SEMED RUA URBANOS SANTOS",
+    "diretor": "FABIA OLIVEIRA PAZ",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:COORDENADOR SETOR ALMOXARIFADO",
+    "endereco": "RUA JOSÉ BONIFÁCIO,813 -JD.SÃO LUIS",
+    "diretor": "HYALISON BRILHANTE SILVA ALMEIDA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:COORDENADOR APOIO AO EDUCANDO",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "PATRICIA GOMES FREITAS DE ARRUDA LIMA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO :COORDDENADOR ASSESSORIA PEDAGÓGICA",
+    "endereco": "EMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "MARIA ELINETE GONÇALVES PEREIRA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:ASSESSORIA DE COMUNICAÇÃO",
+    "endereco": "EMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "NAYANE CRISTINA RODRIGUES DE BRITO",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:PEDAGÓGICO-SETOR ANOS INICIAIS",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "ISABEL ARAÚJO BARROS",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:COORDENADOR ANOS FINAIS",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "MARIA ANTÔNIA COELHO MOURÃO",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:BIBLIOTECA PÚBILCA MUNICIPAL PROFESSOR OSVALDO PEREIRA DE CARVALHO",
+    "endereco": "RUA SÃO DOMINGOS,10 BEIRA RIO",
+    "diretor": "SANDRA RAQUEL DE JESUS COSTA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:COORDENAÇÃO DE CIÊCIAS E TECNOLOGIAS",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "JAMES DEAN CARNEIRO BONFIM",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:CONSELHO MUNICIPAL DE EDUVAÇÃO",
+    "endereco": "RUA LUIS DOMINGOS,650 BAIRRO CENTRO",
+    "diretor": "FRANCISCO SILVESTRE SILVA FILHO",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:COORDENADOR PEDAGÓGICO- SETOR CORREÇÃO DE FLUXO",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "ANTONIRENE RODRIGUES DE ASSIS SILVA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:DE EDUCAÇÃO DE PROGRAMAÇÃO DA EGUIDADE RACIAL",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "ANTÔNIA GISEUDA PEREIRA DA COSATA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:EDUCAÇÃO DO CAMPO",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "JANETE JANE ARANHA DE OLIVEIRA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:EDUCAÇÃO FÍSICA",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "PEDRO ANTÔNIO PEREIRA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO: COORDENAÇÃO INFANTIL",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "EDILMA BANDEIRA DE ARAÚJO NOGUEIRA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:EDUCAÇÃO INTEGRAL",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "FRANCISCO FERREIRA DE DEUS HENRIQUE",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:CURRÍCULO ESCOLAR E FORMAÇÃO CONTINUADA",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "RINALVA SALES DE OLIVEIRA CABRAL",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:COORDENADOR PEDAGOGICO - SETOR EJA",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "JOSÉLIA MARIA DA SILVA MOTA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:FINANCEIRO COORDENADOR",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "FRANCISCO MAGNO SILVA DE OLIVEIRA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:FREQUENCIA ESCOLAR",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "ROSILEIDE MEDEIROS SANTOS",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:CHEFIA DE GABINETE",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "GEOVANE PRATES DE ARAÚJO JUBIOR",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:ADMINISTRATIVO FINANCEIRO/SETOR DIÁRIO ELETRÓNICO - GEDUC",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "JOINY MARIA SANTOS MELO",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:INSPEÇÃO E ESTATISTICA E ESTATISTICA",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "ISAURA XAVIER NASCIMENTO",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:LEVANTAMENTO DE SITUAÇÃO ESCOLAR-LSE",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "ANA CLARA LOPES MAIA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMETO:EDUCAÇÃO AMBIENTAL/ MEU AMBIENTE",
+    "endereco": "RUA SÃO RAFAEL DE ALMEIDA RIBEIRO,600 B.SÃO SALVADOR",
+    "diretor": "GEILSON DE ARRUDA REIS",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:PROJETOS ESPECIAIS",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "RAIMUNDA MARIA BARBOSA DE SÁ",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:RECURSOS HUMANOS",
+    "endereco": "RUA DOM PEDRO II - BACURI",
+    "diretor": "FRACISCA RAYMARA ALMEIDA DO VALE",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:SECRETÁRIA DE ENSINO",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "DOMINGOS BANDEIRA GONÇALVES",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO: SPE/SAÚDE E PREVENÇÃO NAS ESCOLAS - SPE",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "MARIA EDILEUZA ALENCAR SILVA",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:  CENTRO DE ATENDIMENTO EDUCACIONAL ESPECIALIZADO MELVIN JONES",
+    "endereco": "RUA SÃO FRANCISCO QD-10 ALTO DA BOA VISTA, BAIRRO VILA LOBÃO",
+    "diretor": "SEVERINA DANTAS SANTOS",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:SIADI SETOR DE INCLUSÃO E ATENÇÃO À DIVERSIDADE",
+    "endereco": "RUA DOM CESARIO S/N BAIRRO MARAHÃO NOVO",
+    "diretor": "KAMILLA FIGUEIREDO HERENIO",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO: SIND.DOS PROFESSORES E PROFESSORES SINPESMI",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "EURAMI MORAES REIS",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:TECNOLOGIAS",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "GABRIEL PEREIRA DA CONCEIÇÃO",
+    "tipo": "setor"
+  },
+  {
+    "nome": "COORDENAÇÃO DE TRANSPORTE",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "WENDEL CARLOS BARROSO",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO:POLO UAB",
+    "endereco": "RUA DOM PEDRO II S/N - BAIRRO UNIÃO",
+    "diretor": "FRANCISCA NORONHA LÔ",
+    "tipo": "setor"
+  },
+  {
+    "nome": "COORDENADOR ADMINISTRATIVO- PRÉDIO",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "JOÃO DE SOUSA DANTAS",
+    "tipo": "setor"
+  },
+  {
+    "nome": "EVENTOS",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "FRANCISCO EDVAN NOBRE",
+    "tipo": "setor"
+  },
+  {
+    "nome": "BANDAS/FANFARRAS/EVENTOS",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "FRANCISCO EDVAN NOBRE",
+    "tipo": "setor"
+  },
+  {
+    "nome": "DEPARTAMENTO / SETOR JURIDICO",
+    "endereco": "SEMED -RUA URBANO SANTOS, JUÇARA",
+    "diretor": "WACI FEITOSA DE OLIVEIRA",
+    "tipo": "setor"
+  }
+]

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Carta — Sistema de Cartas de Lotação</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="main-header">
+        <div>
+          <h2>Nova Carta de Lotação</h2>
+          <p>Preencha os dados e gere a carta no formato Word padronizado</p>
+        </div>
+      </div>
+
+      <div id="banner-trava"></div>
+
+      <!-- Tela inicial: botão iniciar -->
+      <div class="card" id="tela-iniciar">
+        <div class="vazio">
+          <p style="font-size:40px;margin-bottom:12px;">📄</p>
+          <h3 style="margin-bottom:8px;">Pronto para criar uma nova carta?</h3>
+          <p style="margin-bottom:20px;color:var(--cinza-texto);">Ao iniciar, você não poderá sair até finalizar e baixar a carta.</p>
+          <button class="btn btn-primario" id="btn-iniciar">Iniciar nova carta</button>
+        </div>
+      </div>
+
+      <!-- Formulário em passos -->
+      <div id="tela-form" style="display:none;">
+        <div class="card">
+          <div class="stepper">
+            <div class="step ativa" data-step="1"><div class="step-num">1</div><div class="step-label">Escola</div></div>
+            <div class="step" data-step="2"><div class="step-num">2</div><div class="step-label">Servidor</div></div>
+            <div class="step" data-step="3"><div class="step-num">3</div><div class="step-label">Lotação</div></div>
+            <div class="step" data-step="4"><div class="step-num">4</div><div class="step-label">Gerar</div></div>
+          </div>
+
+          <div id="alerta-form"></div>
+
+          <!-- PASSO 1: Escola -->
+          <div class="passo-conteudo ativo" data-passo="1">
+            <h3>1. Selecione a escola / creche / setor</h3>
+            <div class="form-group autocomplete">
+              <label>Buscar unidade *</label>
+              <input type="text" id="busca-escola" placeholder="Digite o nome da escola, creche ou setor..." autocomplete="off">
+              <div class="autocomplete-lista" id="lista-escolas"></div>
+            </div>
+
+            <div id="escola-selecionada" style="display:none;">
+              <div class="grid grid-2" style="margin-top:16px;">
+                <div class="form-group" style="grid-column:1/-1;">
+                  <label>Prezado(a) — Diretor(a)/Gestor(a)</label>
+                  <input type="text" id="f-diretor" readonly>
+                </div>
+                <div class="form-group">
+                  <label>Escola/Creche</label>
+                  <input type="text" id="f-escola" readonly>
+                </div>
+                <div class="form-group">
+                  <label>Endereço</label>
+                  <input type="text" id="f-endereco" readonly>
+                </div>
+              </div>
+            </div>
+
+            <div class="acoes-passo">
+              <span></span>
+              <button class="btn btn-primario" id="btn-p1" disabled>Próximo →</button>
+            </div>
+          </div>
+
+          <!-- PASSO 2: Servidor -->
+          <div class="passo-conteudo" data-passo="2">
+            <h3>2. Dados do servidor</h3>
+            <div class="grid grid-2">
+              <div class="form-group" style="grid-column:1/-1;">
+                <label>Nome completo *</label>
+                <input type="text" id="f-nome" maxlength="200" style="text-transform:uppercase;">
+              </div>
+              <div class="form-group">
+                <label>CPF *</label>
+                <input type="text" id="f-cpf" placeholder="000.000.000-00" maxlength="14">
+              </div>
+              <div class="form-group">
+                <label>RG (Identidade) *</label>
+                <input type="text" id="f-rg" maxlength="20">
+              </div>
+              <div class="form-group">
+                <label>Matrícula *</label>
+                <input type="text" id="f-matricula" placeholder="00.0000-0" maxlength="30">
+              </div>
+              <div class="form-group">
+                <label>Telefone *</label>
+                <input type="text" id="f-telefone" placeholder="(99) 99999-9999" maxlength="16">
+              </div>
+            </div>
+            <div class="acoes-passo">
+              <button class="btn btn-secundario" data-volta="1">← Voltar</button>
+              <button class="btn btn-primario" data-avanca="3">Próximo →</button>
+            </div>
+          </div>
+
+          <!-- PASSO 3: Lotação -->
+          <div class="passo-conteudo" data-passo="3">
+            <h3>3. Dados da lotação</h3>
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label>Cargo de concurso *</label>
+                <input type="text" id="f-cargo" placeholder="Ex: PROFESSOR DE MATEMÁTICA" maxlength="200" style="text-transform:uppercase;">
+              </div>
+              <div class="form-group">
+                <label>Carga horária semanal (horas) *</label>
+                <input type="text" id="f-carga" placeholder="Ex: 20" maxlength="3">
+              </div>
+              <div class="form-group">
+                <label>Sala / Ano / Série *</label>
+                <input type="text" id="f-ano" placeholder="Ex: 6º AO 9º ANO" maxlength="100" style="text-transform:uppercase;">
+              </div>
+              <div class="form-group">
+                <label>Turno(s) *</label>
+                <select id="f-turno">
+                  <option value="">Selecione...</option>
+                  <option>MATUTINO</option>
+                  <option>VESPERTINO</option>
+                  <option>NOTURNO</option>
+                  <option>MATUTINO E VESPERTINO</option>
+                  <option>VESPERTINO E NOTURNO</option>
+                  <option>MATUTINO E NOTURNO</option>
+                  <option>INTEGRAL</option>
+                </select>
+              </div>
+              <div class="form-group" style="grid-column:1/-1;">
+                <label>Observação (opcional — sairá na carta exatamente como digitado)</label>
+                <textarea id="f-obs" rows="3" maxlength="1000" placeholder="Ex: TRANSFERIDO DA ESCOLA JOSÉ SINEY FERRAZ."></textarea>
+              </div>
+            </div>
+            <div class="acoes-passo">
+              <button class="btn btn-secundario" data-volta="2">← Voltar</button>
+              <button class="btn btn-primario" data-avanca="4">Próximo →</button>
+            </div>
+          </div>
+
+          <!-- PASSO 4: Revisão e Gerar -->
+          <div class="passo-conteudo" data-passo="4">
+            <h3>4. Revise e gere a carta</h3>
+            <div class="card" style="background:var(--cinza-claro);box-shadow:none;" id="resumo"></div>
+            <div class="alerta alerta-info">
+              ℹ️ Ao clicar em "Gerar e baixar", o arquivo Word será baixado e a trava será liberada.
+            </div>
+            <div class="acoes-passo">
+              <button class="btn btn-secundario" data-volta="3">← Voltar</button>
+              <div style="display:flex;gap:10px;">
+                <button class="btn btn-perigo" id="btn-cancelar" style="display:none;">Cancelar carta</button>
+                <button class="btn btn-sucesso" id="btn-gerar">⬇️ Gerar e baixar carta (.docx)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tela pós-download -->
+      <div class="card" id="tela-sucesso" style="display:none;">
+        <div class="vazio">
+          <p style="font-size:40px;margin-bottom:12px;">✅</p>
+          <h3 style="margin-bottom:8px;color:var(--verde-cidade);">Carta gerada com sucesso!</h3>
+          <p style="margin-bottom:20px;color:var(--cinza-texto);">O download foi iniciado. A trava foi liberada.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <button class="btn btn-primario" id="btn-outra">📄 Fazer outra carta</button>
+            <a href="/dashboard" class="btn btn-secundario">🏠 Voltar ao início</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/nova-carta.js"></script>
+</body>
+</html>

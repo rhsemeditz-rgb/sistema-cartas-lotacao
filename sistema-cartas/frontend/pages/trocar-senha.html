@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trocar Senha — Sistema de Cartas de Lotação</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="login-body">
+  <div class="login-card">
+    <img src="/assets/brasao.png" alt="Brasão de Imperatriz" class="login-brasao">
+    <h1 class="login-titulo">Trocar senha</h1>
+    <p class="login-subtitulo" id="subtitulo">Defina uma nova senha de acesso</p>
+
+    <div id="alerta" style="display:none;" class="alerta alerta-erro"></div>
+
+    <form id="form" novalidate>
+      <div class="form-group">
+        <label for="atual">Senha atual</label>
+        <input type="password" id="atual" autocomplete="current-password" required maxlength="200">
+      </div>
+      <div class="form-group">
+        <label for="nova">Nova senha (mínimo 8 caracteres)</label>
+        <input type="password" id="nova" autocomplete="new-password" required maxlength="200">
+      </div>
+      <div class="form-group">
+        <label for="confirma">Confirmar nova senha</label>
+        <input type="password" id="confirma" autocomplete="new-password" required maxlength="200">
+      </div>
+      <button type="submit" class="btn btn-primario login-btn" id="btn">Salvar nova senha</button>
+    </form>
+
+    <p class="login-rodape"><a href="/dashboard" id="link-voltar" style="color:var(--azul-imperial);">← Voltar ao início</a></p>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    (async function () {
+      await App.carregarSessao();
+
+      const alerta = document.getElementById('alerta');
+      const btn = document.getElementById('btn');
+
+      if (App.usuario.trocar_senha) {
+        document.getElementById('subtitulo').textContent = 'Por segurança, você precisa definir uma nova senha no primeiro acesso.';
+        document.getElementById('link-voltar').style.display = 'none';
+      }
+
+      function erro(msg) {
+        alerta.className = 'alerta alerta-erro';
+        alerta.textContent = msg;
+        alerta.style.display = 'block';
+      }
+
+      document.getElementById('form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        alerta.style.display = 'none';
+
+        const atual = document.getElementById('atual').value;
+        const nova = document.getElementById('nova').value;
+        const confirma = document.getElementById('confirma').value;
+
+        if (nova.length < 8) return erro('A nova senha deve ter pelo menos 8 caracteres.');
+        if (nova !== confirma) return erro('As senhas não conferem.');
+        if (nova === atual) return erro('A nova senha deve ser diferente da atual.');
+
+        btn.disabled = true;
+        btn.innerHTML = '<span class="loading"></span>';
+
+        try {
+          const res = await App.api('/api/auth/trocar-senha', {
+            method: 'POST',
+            body: { senha_atual: atual, senha_nova: nova }
+          });
+          const d = await res.json();
+          if (!res.ok) {
+            erro(d.erro || 'Erro ao trocar senha.');
+            btn.disabled = false;
+            btn.textContent = 'Salvar nova senha';
+            return;
+          }
+          alerta.className = 'alerta alerta-sucesso';
+          alerta.textContent = 'Senha alterada com sucesso! Redirecionando...';
+          alerta.style.display = 'block';
+          setTimeout(() => window.location.href = '/dashboard', 1200);
+        } catch (err) {
+          erro('Erro de conexão.');
+          btn.disabled = false;
+          btn.textContent = 'Salvar nova senha';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

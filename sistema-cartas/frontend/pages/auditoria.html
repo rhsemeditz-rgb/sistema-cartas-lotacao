@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditoria — Sistema de Cartas de Lotação</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="main-header">
+        <div>
+          <h2>Auditoria de Cartas</h2>
+          <p>Registro de todas as cartas geradas no sistema</p>
+        </div>
+      </div>
+
+      <div class="dashboard-cards" id="stats"></div>
+
+      <div class="card">
+        <div class="busca-wrapper">
+          <input type="text" id="busca" placeholder="Buscar por servidor, CPF, escola ou quem gerou...">
+          <input type="date" id="data-inicio" title="Data inicial">
+          <input type="date" id="data-fim" title="Data final">
+          <button class="btn btn-secundario btn-pequeno" id="btn-limpar">Limpar filtros</button>
+        </div>
+        <p style="color:var(--cinza-texto);font-size:12px;margin-bottom:12px;" id="contador"></p>
+        <div class="tabela-wrapper">
+          <table>
+            <thead>
+              <tr><th>Data/Hora</th><th>Servidor</th><th>CPF</th><th>Matrícula</th><th>Cargo</th><th>Escola</th><th>Gerada por</th></tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    (async function () {
+      await App.carregarSessao();
+      if (App.usuario.tipo !== 'admin') { window.location.href = '/dashboard'; return; }
+      App.montarSidebar('auditoria');
+      App.ativarTravaSaida();
+
+      const tbody = document.getElementById('tbody');
+
+      async function carregarStats() {
+        const res = await App.api('/api/auditoria/estatisticas');
+        const s = await res.json();
+        document.getElementById('stats').innerHTML = `
+          <div class="stat-card"><h4>Cartas hoje</h4><div class="num">${s.hoje}</div></div>
+          <div class="stat-card amarelo"><h4>Cartas no mês</h4><div class="num">${s.mes}</div></div>
+          <div class="stat-card verde"><h4>Total geral</h4><div class="num">${s.total}</div></div>
+        `;
+      }
+
+      async function carregar() {
+        const busca = document.getElementById('busca').value.trim();
+        const di = document.getElementById('data-inicio').value;
+        const df = document.getElementById('data-fim').value;
+        const res = await App.api(`/api/auditoria/?busca=${encodeURIComponent(busca)}&data_inicio=${di}&data_fim=${df}&limite=300`);
+        const lista = await res.json();
+        document.getElementById('contador').textContent = `${lista.length} registro(s)`;
+
+        if (!lista.length) {
+          tbody.innerHTML = '<tr><td colspan="7" class="vazio">Nenhum registro encontrado</td></tr>';
+          return;
+        }
+        tbody.innerHTML = lista.map(l => `
+          <tr>
+            <td style="white-space:nowrap;">${App.fmtData(l.gerada_em)}</td>
+            <td><strong>${App.esc(l.servidor_nome)}</strong></td>
+            <td>${App.esc(l.servidor_cpf)}</td>
+            <td>${App.esc(l.servidor_matricula || '-')}</td>
+            <td>${App.esc(l.cargo || '-')}</td>
+            <td>${App.esc(l.escola_nome)}</td>
+            <td>${App.esc(l.usuario_nome)}</td>
+          </tr>
+        `).join('');
+      }
+
+      let deb = null;
+      document.getElementById('busca').addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(carregar, 300); });
+      document.getElementById('data-inicio').addEventListener('change', carregar);
+      document.getElementById('data-fim').addEventListener('change', carregar);
+      document.getElementById('btn-limpar').addEventListener('click', () => {
+        document.getElementById('busca').value = '';
+        document.getElementById('data-inicio').value = '';
+        document.getElementById('data-fim').value = '';
+        carregar();
+      });
+
+      carregarStats();
+      carregar();
+    })();
+  </script>
+</body>
+</html>

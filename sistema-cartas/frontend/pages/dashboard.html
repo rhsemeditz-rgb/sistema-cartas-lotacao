@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início — Sistema de Cartas de Lotação</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <div class="main-header">
+        <div>
+          <h2 id="saudacao">Bem-vindo(a)</h2>
+          <p>Sistema de Gestão de Cartas de Lotação dos Servidores</p>
+        </div>
+      </div>
+
+      <div id="banner-trava"></div>
+
+      <div class="dashboard-cards" id="stats" style="display:none;"></div>
+
+      <div class="card">
+        <h3>Ações rápidas</h3>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="/nova-carta" class="btn btn-primario">📄 Nova Carta de Lotação</a>
+          <span id="acoes-admin"></span>
+        </div>
+      </div>
+
+      <div class="card" id="card-ultimas" style="display:none;">
+        <h3>Últimas cartas geradas</h3>
+        <div class="tabela-wrapper">
+          <table>
+            <thead>
+              <tr><th>Servidor</th><th>Escola</th><th>Gerada por</th><th>Data</th></tr>
+            </thead>
+            <tbody id="tb-ultimas"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    (async function () {
+      await App.carregarSessao();
+      App.montarSidebar('dashboard');
+      App.ativarTravaSaida();
+
+      document.getElementById('saudacao').textContent = `Bem-vindo(a), ${App.usuario.nome.split(' ')[0]}!`;
+
+      if (App.cartaEmAndamento) {
+        document.getElementById('banner-trava').innerHTML =
+          '<div class="trava-banner">⚠️ Você tem uma carta em andamento. <a href="/nova-carta" style="color:inherit;font-weight:700;">Clique aqui para finalizar</a>.</div>';
+      }
+
+      if (App.usuario.tipo === 'admin') {
+        document.getElementById('acoes-admin').innerHTML = `
+          <a href="/usuarios" class="btn btn-secundario">👥 Usuários</a>
+          <a href="/escolas" class="btn btn-secundario">🏫 Escolas</a>
+          <a href="/auditoria" class="btn btn-secundario">📋 Auditoria</a>
+        `;
+
+        try {
+          const [statsRes, logRes] = await Promise.all([
+            App.api('/api/auditoria/estatisticas'),
+            App.api('/api/auditoria/?limite=8')
+          ]);
+          const stats = await statsRes.json();
+          const logs = await logRes.json();
+
+          const el = document.getElementById('stats');
+          el.style.display = 'grid';
+          el.innerHTML = `
+            <div class="stat-card"><h4>Cartas hoje</h4><div class="num">${stats.hoje}</div></div>
+            <div class="stat-card amarelo"><h4>Cartas no mês</h4><div class="num">${stats.mes}</div></div>
+            <div class="stat-card verde"><h4>Total geral</h4><div class="num">${stats.total}</div></div>
+          `;
+
+          if (logs.length) {
+            document.getElementById('card-ultimas').style.display = 'block';
+            document.getElementById('tb-ultimas').innerHTML = logs.map(l => `
+              <tr>
+                <td><strong>${App.esc(l.servidor_nome)}</strong></td>
+                <td>${App.esc(l.escola_nome)}</td>
+                <td>${App.esc(l.usuario_nome)}</td>
+                <td>${App.fmtData(l.gerada_em)}</td>
+              </tr>
+            `).join('');
+          }
+        } catch (e) { /* stats opcionais */ }
+      }
+    })();
+  </script>
+</body>
+</html>
